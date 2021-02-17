@@ -12,17 +12,13 @@ int main(){
         return 0;
     }
 
-
 double eApprox(int n){
    int count;
    double val;
-   double fact;
-   fact = 1;
+   double sum;
    val = 1;
-   for(count = 1; count <= n; count++){
-       fact *= count;
-       val += (1 / fact);
+   for(count = n; count > 0; count--){
+       sum = 1 + val * sum / count;
    }
-   return val;
-
+   return sum;
 }
