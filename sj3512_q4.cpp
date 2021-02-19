@@ -14,21 +14,16 @@ int main(){
 }
 void printDivisors(int num){
     int count;
-    for(count = 1; count <= sqrt(num); count++){
+    for(count = 1; count <= sqrt(num) - 1; count++){
         if(num % count == 0){
             cout<<count<<" ";
-
         }
     }
     for(count = sqrt(num); count <= num; count++){
         if(num % count == 0){
-            if(num / count != count){
                 cout<<count<<" ";
-            }
+
         }
-
-
-
     }
 
 }
